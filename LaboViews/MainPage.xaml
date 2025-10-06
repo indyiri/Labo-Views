@@ -17,7 +17,7 @@
                 <Border.Shadow>
                     <Shadow 
                         Brush="DarkGray"
-                        Opacity="0.5"
+                        Opacity="1"
                         Offset="5,5"
                         Radius="10"/>
                 </Border.Shadow>
@@ -39,8 +39,11 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="15"/>
                 </Border.StrokeShape>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Border.GestureRecognizers>
                 <Grid
-                    BackgroundColor="Black">
+                    x:Name="cardGrid">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
