@@ -5,10 +5,91 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
-            Spacing="225">
+            Padding="30,0">
 
-            <Label>Hello World!</Label>
+            <Border 
+                Stroke="Green"
+                StrokeThickness="4"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Margin="10"
+                StrokeShape="Ellipse">
+                <Border.Shadow>
+                    <Shadow 
+                        Brush="DarkGray"
+                        Opacity="0.5"
+                        Offset="5,5"
+                        Radius="10"/>
+                </Border.Shadow>
+                <Image 
+                    x:Name="profilePictureImage"
+                    Source="profile_picture.jpg"
+                    WidthRequest="150"
+                    HeightRequest="150"
+                    Aspect="AspectFill"/>
+            </Border>
+
+
+            <Border
+                Stroke="Green"
+                StrokeThickness="4"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Margin="10">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15"/>
+                </Border.StrokeShape>
+                <Grid
+                    BackgroundColor="Black">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border
+                        StrokeThickness="0"
+                        BackgroundColor="Transparent"
+                        Grid.Row="0" 
+                        Grid.RowSpan="3"
+                        Grid.Column="0">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="15, 0, 15, 0"/>
+                        </Border.StrokeShape>
+                        <Image 
+                            x:Name="profileCardImage"
+                            Source="profile_picture.jpg"
+                            WidthRequest="120"
+                            HeightRequest="120"
+                            Aspect="AspectFill"/>
+                    </Border>
+                    <Label 
+                        Text="Name: Indy Iri"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Padding="5"
+                        WidthRequest="170"/>
+                    <Label 
+                        Text="Age: 28"
+                        TextColor="White"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Padding="5"
+                        WidthRequest="170"/>
+                    <Label 
+                        Text="Job: Developper"
+                        TextColor="White"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Padding="5"
+                        WidthRequest="170"/>
+                </Grid>
+            </Border>
 
         </VerticalStackLayout>
     </ScrollView>
